@@ -13,10 +13,10 @@ service /facebook on new http:Listener(8081) {
     resource function get getLatestPageLikesCount(http:Caller caller, http:Request req) returns error? {
         http:Response resp = new;
         
-        mysql:Client mysqlClient = check new (host = "localhost",
-                                            user = "root",
-                                            password = "",
-                                            database = "facebook", port = 3306);
+        mysql:Client mysqlClient = check new (host = "mysql-910d8c3f-ba85-4197-803c-871a29817e06-facebook3110123301-c.a.aivencloud.com",
+                                            user = "avnadmin",
+                                            password = "AVNS_HW37GgpYNqBRmB4zVK8",
+                                            database = "facebook", port = 12845);
 
         stream<Result, sql:Error?> resultStream = mysqlClient->query(`SELECT * FROM likes`);
         

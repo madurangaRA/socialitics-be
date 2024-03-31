@@ -319,7 +319,7 @@ modules = [
 
 [[package]]
 org = "madurangarathnamalala"
-name = "facebook_api"
+name = "socialitics"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -329,6 +329,6 @@ dependencies = [
 	{org = "ballerinax", name = "mysql.driver"}
 ]
 modules = [
-	{org = "madurangarathnamalala", packageName = "facebook_api", moduleName = "facebook_api"}
+	{org = "madurangarathnamalala", packageName = "socialitics", moduleName = "socialitics"}
 ]
 
