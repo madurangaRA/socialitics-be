@@ -15,7 +15,7 @@ service /facebook on new http:Listener(8081) {
         
         mysql:Client mysqlClient = check new (host = "mysql-910d8c3f-ba85-4197-803c-871a29817e06-facebook3110123301-c.a.aivencloud.com",
                                             user = "avnadmin",
-                                            password = "AVNS_HW37GgpYNqBRmB4zVK8",
+                                            password = "",
                                             database = "facebook", port = 12845);
 
         stream<Result, sql:Error?> resultStream = mysqlClient->query(`SELECT * FROM likes`);
